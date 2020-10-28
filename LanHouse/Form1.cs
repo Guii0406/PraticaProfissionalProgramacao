@@ -306,6 +306,8 @@ namespace Lanhouse
 
         }
 
+        
+
 
         //PAINEL DINAMICO DO LADO DOS BOTOES
         private void button2_Click(object sender, EventArgs e)
@@ -327,6 +329,11 @@ namespace Lanhouse
         {
             panel3.Top = button6.Top;
             tabControl1.SelectTab(3);
+        }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            panel3.Top = button10.Top;
+            tabControl1.SelectTab(4);
         }
 
 
