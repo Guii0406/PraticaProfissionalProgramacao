@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LanHouse.Properties
+namespace Lanhouse.Properties
 {
 
 

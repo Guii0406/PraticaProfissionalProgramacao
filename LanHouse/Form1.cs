@@ -8,8 +8,12 @@ namespace Lanhouse
 {
     public partial class Form1 : Form
     {
+        public bool cancelar = false;
+        public bool logado = false;
         List<Caixa> listaCaixa = new List<Caixa>();
         List<ClienteEspera> listaEspera = new List<ClienteEspera>();
+        List<Cliente> listaClientes = new List<Cliente>();
+
         Point DragCursor;
         Point DragForm;
         bool Dragging;
@@ -19,6 +23,12 @@ namespace Lanhouse
         public Form1()
         {
             InitializeComponent();
+        }
+        
+        //CADASTRO DE CLIENTES
+        private void button11_Click(object sender, EventArgs e)
+        {
+            listaClientes.Add(new Cliente(textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text));
         }
 
         //FECHAR, MINIMIZAR E MOVIMENTAR FORM COM PAINEL
@@ -64,6 +74,17 @@ namespace Lanhouse
         }
         private void iniciarUsoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            FormIniciar formIniciar = new FormIniciar(listaClientes, this);
+            formIniciar.ShowDialog();
+            //if(logado == true)
+            //{
+            //    MessageBox.Show("logado");
+            //    return;
+            //}
+            if(cancelar == true)
+            {
+                return;
+            }
             if (pc1)
             {
                 iniciarUso(label1, label9, timer1);
@@ -315,6 +336,9 @@ namespace Lanhouse
             panel3.Top = button2.Top;
             tabControl1.SelectTab(0);
         }
+
+        
+
         private void button4_Click(object sender, EventArgs e)
         {
             panel3.Top = btn_4.Top;
