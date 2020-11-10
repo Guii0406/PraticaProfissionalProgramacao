@@ -9,7 +9,7 @@ namespace Lanhouse
     public partial class Form1 : Form
     {
         public bool cancelar = false;
-        public bool logado = false;
+        public bool logado = false, logado2 = false, logado3 = false, logado4 = false, logado5 = false, logado6 = false, logado7 = false, logado8 = false;
         List<Caixa> listaCaixa = new List<Caixa>();
         List<ClienteEspera> listaEspera = new List<ClienteEspera>();
         List<Cliente> listaClientes = new List<Cliente>();
@@ -74,54 +74,98 @@ namespace Lanhouse
         }
         private void iniciarUsoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FormIniciar formIniciar = new FormIniciar(listaClientes, this);
-            formIniciar.ShowDialog();
+            Label labelStatus = null, labelTimer= null;
+            Timer timerr = null;
+            bool logadoo = false;
+            FormIniciar formIniciar = null;
+
             //if(logado == true)
             //{
             //    MessageBox.Show("logado");
             //    return;
             //}
-            if(cancelar == true)
-            {
-                return;
-            }
+
             if (pc1)
             {
-                iniciarUso(label1, label9, timer1);
+                //iniciarUso(label1, label9, timer1);
+                labelStatus = label1;
+                labelTimer = label9;
+                timerr = timer1;
+                //logadoo = logado;
+                 formIniciar = new FormIniciar(listaClientes, this, "logado");
+
             }
             else if (pc2)
             {
-                iniciarUso(label2, label10, timer2);
+                //iniciarUso(label2, label10, timer2);
+                labelStatus = label2;
+                labelTimer = label10;
+                timerr = timer2;
+                //logadoo = logado2;
+                formIniciar = new FormIniciar(listaClientes, this, "logado2");
+
             }
             else if (pc3)
             {
-                iniciarUso(label3, label11, timer3);
+                //iniciarUso(label3, label11, timer3);
+                labelStatus = label3;
+                labelTimer = label11;
+                timerr = timer3;
+                formIniciar = new FormIniciar(listaClientes, this, "logado3");
             }
             else if (pc4)
             {
-                iniciarUso(label4, label12, timer4);
+                //iniciarUso(label4, label12, timer4);
+                labelStatus = label4;
+                labelTimer = label12;
+                timerr = timer4;
+                formIniciar = new FormIniciar(listaClientes, this, "logado4");
+
             }
             else if (pc5)
             {
-                iniciarUso(label5, label13, timer5);
+                //iniciarUso(label5, label13, timer5);
+                labelStatus = label5;
+                labelTimer = label13;
+                timerr = timer5;
+                formIniciar = new FormIniciar(listaClientes, this, "logado5");
             }
             else if (pc6)
             {
-                iniciarUso(label6, label14, timer6);
+                //iniciarUso(label6, label14, timer6);
+                labelStatus = label6;
+                labelTimer = label14;
+                timerr = timer6;
+                formIniciar = new FormIniciar(listaClientes, this, "logado6");
             }
             else if (pc7)
             {
-                iniciarUso(label7, label15, timer7);
+                //iniciarUso(label7, label15, timer7);
+                labelStatus = label7;
+                labelTimer = label15;
+                timerr = timer7;
+                formIniciar = new FormIniciar(listaClientes, this, "logado7");
             }
             else if (pc8)
             {
-                iniciarUso(label8, label16, timer8);
+                //iniciarUso(label8, label16, timer8);
+                labelStatus = label8;
+                labelTimer = label16;
+                timerr = timer8;
+                formIniciar = new FormIniciar(listaClientes, this, "logado8");
             }
+            formIniciar.ShowDialog();
+            if (cancelar == true)
+            {
+                return;
+            }
+
+            iniciarUso(labelStatus, labelTimer, timerr);
         }
 
 
         //PARAR USO
-        private void InterromperUso(Label labelStatus, Label labelTimer, Timer timer, ref int minutoo, ref int segundoo)
+        private void InterromperUso(Label labelStatus, Label labelTimer, Timer timer, ref int minutoo, ref int segundoo, string logadoo)
         {
             if (minutoo == 0 && segundoo == 0)
             {
@@ -133,7 +177,7 @@ namespace Lanhouse
             labelStatus.ForeColor = Color.Green;
             labelTimer.Visible = false;
 
-            CalcularPreco(minutoo, segundoo);
+            CalcularPreco(minutoo, segundoo, logadoo);
             minutoo = 0;
             segundoo = 0;
             labelTimer.Text = "00:00";
@@ -142,65 +186,114 @@ namespace Lanhouse
         {
             if (pc1)
             {
-                InterromperUso(label1, label9, timer1, ref minuto, ref segundo);
+                InterromperUso(label1, label9, timer1, ref minuto, ref segundo, "logado");
             }
             else if (pc2)
             {
-                InterromperUso(label2, label10, timer2, ref minuto2, ref segundo2);
+                InterromperUso(label2, label10, timer2, ref minuto2, ref segundo2, "logado2");
             }
             else if (pc3)
             {
-                InterromperUso(label3, label11, timer3, ref minuto3, ref segundo3);
+                InterromperUso(label3, label11, timer3, ref minuto3, ref segundo3, "logado3");
             }
             else if (pc4)
             {
-                InterromperUso(label4, label12, timer4, ref minuto4, ref segundo4);
+                InterromperUso(label4, label12, timer4, ref minuto4, ref segundo4, "logado4");
             }
             else if (pc5)
             {
-                InterromperUso(label5, label13, timer5, ref minuto5, ref segundo5);
+                InterromperUso(label5, label13, timer5, ref minuto5, ref segundo5, "logado5");
             }
             else if (pc6)
             {
-                InterromperUso(label6, label14, timer6, ref minuto6, ref segundo6);
+                InterromperUso(label6, label14, timer6, ref minuto6, ref segundo6, "logado6");
             }
             else if (pc7)
             {
-                InterromperUso(label7, label15, timer7, ref minuto7, ref segundo7);
+                InterromperUso(label7, label15, timer7, ref minuto7, ref segundo7, "logado7");
             }
             else if (pc8)
             {
-                InterromperUso(label8, label16, timer8, ref minuto8, ref segundo8);
+                InterromperUso(label8, label16, timer8, ref minuto8, ref segundo8, "logado8");
             }
         }
-
-
-        //CALCULAR PRECO, MOSTRAR E MANDAR PRO CAIXA
-        private void CalcularPreco(int minutoo, int segundoo)
+        private void testarDesconto(bool logadoo, int minutoo, int segundoo)
         {
+            //if (logadoo == true)
+            //{
+            //    MessageBox.Show("DESCONTO");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("SEM DESCONTO");
+            //}
+
             double preco = 0;
             string tempo;
-
             if (minutoo == 0)
             {
-                tempo = $"{segundoo} segundos";
                 preco = 1;
+                if(logadoo == true)
+                {
+                    preco = 0.75;
+                }
+                tempo = $"{segundoo} segundos";
                 MessageBox.Show($"o tempo total foi de {segundoo} segundos, O preço minimo é R${preco}");
             }
             else if (minutoo < 5)
             {
-                tempo = $"{minutoo}:{segundoo}";
                 preco = 1;
+                if (logadoo == true)
+                {
+                    preco = 0.75;
+                }
+                tempo = $"{minutoo}:{segundoo}";
                 MessageBox.Show($"o tempo total foi de {minutoo}:{segundoo} , O preço minimo é R${preco}");
             }
             else
             {
-                tempo = $"{minutoo}:{segundoo}";
                 preco = minutoo / 5;
+                if (logadoo == true)
+                {
+                    preco = preco - (25.0/100.0);
+                }
+                tempo = $"{minutoo}:{segundoo}";
                 MessageBox.Show($"o tempo total foi de {minutoo}:{segundoo} , cobre R${preco}");
             }
 
             InserirNoCaixa($"Uso do computador ({tempo})", preco);
+        }
+
+        //CALCULAR PRECO, MOSTRAR E MANDAR PRO CAIXA
+        private void CalcularPreco(int minutoo, int segundoo, string logadoo)
+        {
+            switch (logadoo)
+            {
+                case "logado":
+                    testarDesconto(logado, minutoo, segundoo);
+                    break;
+                case "logado2":
+                    testarDesconto(logado2, minutoo, segundoo);
+                    break;
+                case "logado3":
+                    testarDesconto(logado3, minutoo, segundoo);
+                    break;
+                case "logado4":
+                    testarDesconto(logado4, minutoo, segundoo);
+                    break;
+                case "logado5":
+                    testarDesconto(logado5, minutoo, segundoo);
+                    break;
+                case "logado6":
+                    testarDesconto(logado6, minutoo, segundoo);
+                    break;
+                case "logado7":
+                    testarDesconto(logado7, minutoo, segundoo);
+                    break;
+                case "logado8":
+                    testarDesconto(logado8, minutoo, segundoo);
+                    break;
+            }          
         }
         //INSERIR NO CAIXA
         private void InserirNoCaixa(string servico, double total)

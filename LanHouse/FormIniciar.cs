@@ -17,13 +17,15 @@ namespace Lanhouse
         bool Dragging;
         List<Cliente> listaClientes;
         Form1 form1;
+        string logado;
         
-        public FormIniciar(List<Cliente> listaClientes, Form1 form1)
+        public FormIniciar(List<Cliente> listaClientes, Form1 form1, string logado)
         {
             InitializeComponent();
             this.listaClientes = listaClientes;
             this.form1 = form1;
             form1.cancelar = false;
+            this.logado = logado;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -33,22 +35,52 @@ namespace Lanhouse
 
         private void button4_Click(object sender, EventArgs e)
         {
-            form1.logado = false;
+            switch (logado)
+            {
+                case "logado":
+                    TestarLogin(ref form1.logado);
+                    break;
+                case "logado2":
+                    TestarLogin(ref form1.logado2);
+                    break;
+                case "logado3":
+                    TestarLogin(ref form1.logado3);
+                    break;
+                case "logado4":
+                    TestarLogin(ref form1.logado4);
+                    break;
+                case "logado5":
+                    TestarLogin(ref form1.logado5);
+                    break;
+                case "logado6":
+                    TestarLogin(ref form1.logado6);
+                    break;
+                case "logado7":
+                    TestarLogin(ref form1.logado7);
+                    break;
+                case "logado8":
+                    TestarLogin(ref form1.logado8);
+                    break;
+            }
+        }
+        private void TestarLogin(ref bool logado)
+        {
+            logado = false;
             foreach (Cliente c in listaClientes)
             {
-                if(c.Cpf == textBox3.Text)
+                if (c.Cpf == textBox3.Text)
                 {
-                    form1.logado = true;
-                    MessageBox.Show("logado");
+                    logado = true;
+                    //MessageBox.Show("logado");
                     this.Close();
+                    break;
                 }
             }
-            if(form1.logado == false)
+            if (logado == false)
             {
                 MessageBox.Show("nenhum usuario com esse cpf foi encontrado");
             }
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             form1.cancelar = true;
@@ -56,7 +88,6 @@ namespace Lanhouse
         }
         private void button11_Click(object sender, EventArgs e)
         {
-            form1.logado = false;
             this.Close();
         }
 
