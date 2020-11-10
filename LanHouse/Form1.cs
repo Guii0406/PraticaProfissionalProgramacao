@@ -217,7 +217,7 @@ namespace Lanhouse
                 InterromperUso(label8, label16, timer8, ref minuto8, ref segundo8, "logado8");
             }
         }
-        private void testarDesconto(bool logadoo, int minutoo, int segundoo)
+        private void testarDesconto(ref bool logadoo, int minutoo, int segundoo)
         {
             //if (logadoo == true)
             //{
@@ -262,6 +262,7 @@ namespace Lanhouse
             }
 
             InserirNoCaixa($"Uso do computador ({tempo})", preco);
+            logadoo = false;
         }
 
         //CALCULAR PRECO, MOSTRAR E MANDAR PRO CAIXA
@@ -270,28 +271,28 @@ namespace Lanhouse
             switch (logadoo)
             {
                 case "logado":
-                    testarDesconto(logado, minutoo, segundoo);
+                    testarDesconto(ref logado, minutoo, segundoo);
                     break;
                 case "logado2":
-                    testarDesconto(logado2, minutoo, segundoo);
+                    testarDesconto(ref logado2, minutoo, segundoo);
                     break;
                 case "logado3":
-                    testarDesconto(logado3, minutoo, segundoo);
+                    testarDesconto(ref logado3, minutoo, segundoo);
                     break;
                 case "logado4":
-                    testarDesconto(logado4, minutoo, segundoo);
+                    testarDesconto(ref logado4, minutoo, segundoo);
                     break;
                 case "logado5":
-                    testarDesconto(logado5, minutoo, segundoo);
+                    testarDesconto(ref logado5, minutoo, segundoo);
                     break;
                 case "logado6":
-                    testarDesconto(logado6, minutoo, segundoo);
+                    testarDesconto(ref logado6, minutoo, segundoo);
                     break;
                 case "logado7":
-                    testarDesconto(logado7, minutoo, segundoo);
+                    testarDesconto(ref logado7, minutoo, segundoo);
                     break;
                 case "logado8":
-                    testarDesconto(logado8, minutoo, segundoo);
+                    testarDesconto(ref logado8, minutoo, segundoo);
                     break;
             }          
         }
