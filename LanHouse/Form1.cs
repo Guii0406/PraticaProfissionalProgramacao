@@ -28,7 +28,11 @@ namespace Lanhouse
         //CADASTRO DE CLIENTES
         private void button11_Click(object sender, EventArgs e)
         {
-            listaClientes.Add(new Cliente(textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text));
+            listaClientes.Add(new Cliente(textBox2.Text, maskedTextBox2.Text, textBox4.Text, textBox5.Text));
+            textBox2.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            maskedTextBox2.Clear();
         }
 
         //FECHAR, MINIMIZAR E MOVIMENTAR FORM COM PAINEL
@@ -255,7 +259,8 @@ namespace Lanhouse
                 preco = minutoo / 5;
                 if (logadoo == true)
                 {
-                    preco = preco - (25.0/100.0);
+                    //preco = preco - (25.0/100.0);
+                    preco -= (preco * (25.0 / 100.0));
                 }
                 tempo = $"{minutoo}:{segundoo}";
                 MessageBox.Show($"o tempo total foi de {minutoo}:{segundoo} , cobre R${preco}");
@@ -338,6 +343,8 @@ namespace Lanhouse
 
             listaEspera.Add(new ClienteEspera(textBox1.Text, maskedTextBox1.Text));
             AtualizarFila(listaEspera);
+            textBox1.Clear();
+            maskedTextBox1.Clear();
         }
         private void AtualizarFila(List<ClienteEspera> lista)
         {

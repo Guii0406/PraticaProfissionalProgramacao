@@ -68,7 +68,7 @@ namespace Lanhouse
             logado = false;
             foreach (Cliente c in listaClientes)
             {
-                if (c.Cpf == textBox3.Text)
+                if (c.Cpf == maskedTextBox2.Text)
                 {
                     logado = true;
                     //MessageBox.Show("logado");
@@ -112,6 +112,9 @@ namespace Lanhouse
             DragForm = this.Location;
         }
 
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(0);
+        }
     }
 }
