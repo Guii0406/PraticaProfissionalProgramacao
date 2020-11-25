@@ -28,9 +28,9 @@ namespace Lanhouse
         //CADASTRO DE CLIENTES
         private void button11_Click(object sender, EventArgs e)
         {
-            listaClientes.Add(new Cliente(textBox2.Text, maskedTextBox2.Text, textBox4.Text, textBox5.Text));
+            listaClientes.Add(new Cliente(textBox2.Text, maskedTextBox2.Text, maskedTextBox3.Text, textBox5.Text));
             textBox2.Clear();
-            textBox4.Clear();
+            maskedTextBox3.Clear();
             textBox5.Clear();
             maskedTextBox2.Clear();
         }
@@ -365,6 +365,12 @@ namespace Lanhouse
                 AtualizarFila(listaEspera);
             }
             catch (Exception erro) { MessageBox.Show("Selecione um item válido"); }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            FormClientes formClientes = new FormClientes(listaClientes);
+            formClientes.ShowDialog();
         }
 
         //IMPRESSÃO
