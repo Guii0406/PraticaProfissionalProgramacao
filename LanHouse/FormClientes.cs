@@ -81,6 +81,10 @@ namespace Lanhouse
             {
                 int index = listView2.SelectedItems[0].Index;
                 listaClientes.RemoveAt(index);
+                MontarListView();
+                textBox2.Clear();
+                textBox5.Clear();
+                maskedTextBox3.Clear();
             }
             catch (Exception erro) { }
         }
