@@ -109,6 +109,8 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button12 = new System.Windows.Forms.Button();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -117,8 +119,6 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.button12 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -751,7 +751,7 @@
             "Todos",
             "Computadores",
             "Impressões"});
-            this.comboBox1.Location = new System.Drawing.Point(463, 38);
+            this.comboBox1.Location = new System.Drawing.Point(527, 67);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 5;
@@ -761,7 +761,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(38)))), ((int)(((byte)(199)))));
-            this.panel4.Location = new System.Drawing.Point(132, 321);
+            this.panel4.Location = new System.Drawing.Point(196, 350);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(477, 10);
             this.panel4.TabIndex = 4;
@@ -770,7 +770,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label22.Location = new System.Drawing.Point(318, 334);
+            this.label22.Location = new System.Drawing.Point(382, 363);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(91, 32);
             this.label22.TabIndex = 3;
@@ -781,7 +781,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(318, 27);
+            this.label17.Location = new System.Drawing.Point(382, 56);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(93, 32);
             this.label17.TabIndex = 2;
@@ -794,7 +794,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(313, 383);
+            this.button4.Location = new System.Drawing.Point(377, 412);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(103, 31);
             this.button4.TabIndex = 1;
@@ -809,7 +809,7 @@
             this.columnHeader2});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(132, 75);
+            this.listView1.Location = new System.Drawing.Point(196, 104);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(477, 246);
@@ -851,7 +851,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(321, 19);
+            this.label23.Location = new System.Drawing.Point(369, 24);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(58, 32);
             this.label23.TabIndex = 8;
@@ -872,7 +872,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(343, 432);
+            this.button8.Location = new System.Drawing.Point(344, 445);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(103, 31);
             this.button8.TabIndex = 6;
@@ -978,7 +978,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(258, 60);
+            this.label24.Location = new System.Drawing.Point(340, 93);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(151, 32);
             this.label24.TabIndex = 7;
@@ -991,7 +991,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(298, 318);
+            this.button9.Location = new System.Drawing.Point(359, 352);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(111, 31);
             this.button9.TabIndex = 6;
@@ -1003,7 +1003,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(569, 224);
+            this.label21.Location = new System.Drawing.Point(577, 257);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(71, 27);
             this.label21.TabIndex = 5;
@@ -1013,7 +1013,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(177, 189);
+            this.label20.Location = new System.Drawing.Point(185, 222);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(182, 21);
             this.label20.TabIndex = 4;
@@ -1022,7 +1022,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(363, 187);
+            this.numericUpDown1.Location = new System.Drawing.Point(371, 220);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
             this.numericUpDown1.TabIndex = 3;
@@ -1033,7 +1033,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(318, 240);
+            this.radioButton2.Location = new System.Drawing.Point(326, 273);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(144, 25);
             this.radioButton2.TabIndex = 2;
@@ -1046,7 +1046,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(213, 239);
+            this.radioButton1.Location = new System.Drawing.Point(221, 272);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(94, 25);
             this.radioButton1.TabIndex = 1;
@@ -1074,6 +1074,30 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(38)))), ((int)(((byte)(199)))));
+            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(62, 447);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(178, 31);
+            this.button12.TabIndex = 18;
+            this.button12.Text = "Gerenciar clientes";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.maskedTextBox3.Location = new System.Drawing.Point(380, 202);
+            this.maskedTextBox3.Mask = "(00) 00000-0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(175, 32);
+            this.maskedTextBox3.TabIndex = 17;
             // 
             // maskedTextBox2
             // 
@@ -1154,30 +1178,6 @@
             this.button11.Text = "Cadastrar";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.maskedTextBox3.Location = new System.Drawing.Point(380, 202);
-            this.maskedTextBox3.Mask = "(00) 00000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(175, 32);
-            this.maskedTextBox3.TabIndex = 17;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(38)))), ((int)(((byte)(199)))));
-            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(44, 431);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(178, 31);
-            this.button12.TabIndex = 18;
-            this.button12.Text = "Gerenciar clientes";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Form1
             // 

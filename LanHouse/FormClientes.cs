@@ -12,6 +12,9 @@ namespace Lanhouse
 {
     public partial class FormClientes : Form
     {
+        Point DragCursor;
+        Point DragForm;
+        bool Dragging;
         List<Cliente> listaClientes;
         public FormClientes(List<Cliente> listaClientes)
         {
@@ -71,5 +74,37 @@ namespace Lanhouse
         {
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = listView2.SelectedItems[0].Index;
+                listaClientes.RemoveAt(index);
+            }
+            catch (Exception erro) { }
+        }
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            Dragging = true;
+            DragCursor = Cursor.Position;
+            DragForm = this.Location;
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            Dragging = false;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Dragging == true)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(DragCursor));
+                this.Location = Point.Add(DragForm, new Size(dif));
+            }
+        }
+
+
     }
 }
